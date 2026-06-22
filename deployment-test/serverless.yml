@@ -1,0 +1,418 @@
+service: verto-exchange-now-service
+
+licenseKey: ${ssm:serverless-license-key}
+
+plugins:
+  - serverless-associate-waf
+  - serverless-domain-manager
+  - serverless-api-gateway-throttling
+
+build:
+  esbuild:
+    bundle: true
+    minify: true
+    target: "node20"
+    platform: "node"
+    format: "cjs"
+    sourcemap: false
+    keepNames: true
+    mainFields: ["main", "module"]
+    outExtension:
+      ".js": ".js"
+    exclude: # Not added in node_modules, auto added to externals
+      - aws-sdk
+    external: # Not bundled instead available in node_modules
+      - aws-sdk
+      # Only externalize native binary packages .node .gyp .gypi
+      - microtime
+      - pg
+      - sqlite3
+      - tedious
+      - pg-hstore
+    define:
+      "process.env.NODE_ENV": '"production"'
+
+    buildConcurrency: 4
+
+package:
+  individually: true
+  excludeDevDependencies: true
+  patterns:
+    - src/utilities/env.json
+    - src/utilities/override-env.json
+    - src/utilities/bot-admin-api-credentials.json
+    - src/utilities/db-credentials.json
+    - src/specs
+    - certificates/**
+
+custom:
+  wafAcl:
+    beta: verto-waf-acl-v2
+    uat: verto-waf-acl-v2-uat
+    sandbox: verto-waf-acl-v2
+    non-prod: verto-waf-acl-v2-non-prod
+
+  associateWaf:
+    name: ${self:custom.wafAcl.${self:provider.stage}, 'verto-waf-acl-v2-non-prod'}
+    version: V2
+
+  apiGatewayType:
+    beta: "EDGE"
+    sandbox: "EDGE"
+    uat: "EDGE"
+
+  eventBusQueue:
+    beta: "beta"
+    sandbox: "beta"
+    non-prod: "non-prod"
+    qa: "non-prod"
+    growth: "non-prod"
+    preview: "non-prod"
+    p1: "non-prod"
+    p2: "non-prod"
+    p3: "non-prod"
+    p4: "non-prod"
+
+  cors-settings:
+    origin: "*"
+    headers:
+      - Content-Type
+      - X-Amz-Date
+      - Authorization
+      - X-Api-Key
+      - X-Amz-Security-Token
+      - X-Amz-User-Agent
+      - X-Browser-Version
+      - X-MFA
+      - X-ROLE-NAME
+      - vfx-correlation-id
+      - x-aws-waf-token
+
+  apiGatewayThrottling:
+    maxRequestsPerSecond: 100
+    maxConcurrentRequests: 100
+
+  customDomain:
+    domainName: api-exchange-now-${self:provider.stage}.${self:provider.environment.domainName}
+    basePath: ""
+    stage: ${self:provider.stage}
+    certificateName: ${ssm:primary-certificate-name}
+    certificateArn: ${ssm:primary-certificate-arn}
+    createRoute53Record: true
+
+  securityGroupIds: ${ssm:security-group-id}
+  primarySubnetId: ${ssm:primary-subnet-id}
+  secondarySubNetId: ${ssm:secondary-subnet-id}
+
+  authorizerFunctionUrl: ${ssm:authorizer-function-url}-${self:provider.stage}
+
+  infraConfig:
+    beta: beta
+    staging: beta
+    sandbox: beta
+    dr: dr
+    uat: beta
+    # Below ones will be deleted
+    preview-1: beta
+    preview-2: beta
+    preview-4: beta
+    preview-8: beta
+
+provider:
+  environment:
+    region: ${self:provider.region}
+    stage: ${opt:stage, 'local'}
+    infrastructure: ${env:infrastructure}
+    domainName: ${ssm:domain-suffix}
+    OPERATIONS_QUEUE_NAME: OperationsQueue-${self:provider.stage}
+    NOTIFICATION_SERVICE_URL:
+      Fn::ImportValue: sls-verto-notification-service-${self:provider.stage}-ServiceEndpoint
+    LEDGER_SERVICE_URL:
+      Fn::ImportValue: sls-verto-ledger-service-${self:provider.stage}-ServiceEndpoint
+    eventBusQName:
+      Fn::ImportValue: ${self:custom.eventBusQueue.${self:provider.stage}, 'uat'}-eventBusQName
+    API_WEBHOOK_QUEUE_NAME: verto-api-webhooks-${self:provider.stage}-queue
+    PaymentsAutomationQueue: PaymentsAutomationQueue-${self:provider.stage}
+    auto_exchange_processor_queue: ${self:service}-auto-exchange-processor-queue-${self:provider.stage}
+    funds_processor_queue: ${self:service}-funds-processor-queue-${self:provider.stage}.fifo
+    post_processor_queue: ${self:service}-post-processor-queue-${self:provider.stage}
+    USER_API_URL: "https://api-v3-${self:provider.stage}.${self:provider.environment.domainName}"
+    COMPANY_API_URL: "https://api-company-${self:provider.stage}.${self:provider.environment.domainName}"
+    MONOLITH_API_URL: "https://api-v3-${self:provider.stage}.${self:provider.environment.domainName}"
+    WALLET_API_URL: "https://api-wallet-${self:provider.stage}.${self:provider.environment.domainName}"
+    OTC_SERVICE_URL: "https://api-otc-${self:provider.stage}.${self:provider.environment.domainName}"
+    ONBOARDING_API_URL: "https://api-onboarding-${self:provider.stage}.${self:provider.environment.domainName}"
+    BENEFICIARY_API_URL: "https://api-beneficiary-${self:provider.stage}.${self:provider.environment.domainName}"
+    SUBSCRIPTION_API_URL: "https://api-subscriptions-${self:provider.stage}.${self:provider.environment.domainName}"
+    CURRENCY_API_URL: "https://api-currency-${self:provider.stage}.${self:provider.environment.domainName}"
+    INVOICE_SERVICE_URL: "https://api-invoices-${self:provider.stage}.${self:provider.environment.domainName}"
+    CASE_MANAGEMENT_SERVICE_URL: "https://api-case-management-${self:provider.stage}.${self:provider.environment.domainName}"
+    DATABASE_HOST: ${ssm:${env:infrastructure}-database-host}
+    DATABASE_NAME: ${ssm:${self:provider.stage}-database-name}
+    REDIS_HOST: ${ssm:${env:infrastructure}-redis-host}
+    MONGO_CONNECTION_DOMAIN: ${ssm:${env:infrastructure}-mongo-domain}
+    MONGO_DATABASE_NAME: ${ssm:${self:provider.stage}-mongo-db-name}
+
+  name: aws
+  runtime: nodejs20.x
+  versionFunctions: false
+
+  region: ${opt:region}
+  stackName: verto-exchange-now-service-${opt:stage, 'local'}
+  stage: ${opt:stage, 'local'}
+  vpc:
+    securityGroupIds:
+      - ${self:custom.securityGroupIds}
+    subnetIds:
+      - ${self:custom.primarySubnetId}
+      - ${self:custom.secondarySubNetId}
+  timeout: 30
+
+  endpointType: ${self:custom.apiGatewayType.${self:provider.stage}, 'REGIONAL'}
+
+  apiGateway:
+    shouldStartNameWithService: false
+    binaryMediaTypes:
+      - "application/octet-stream"
+    resourcePolicy:
+      - Effect: Allow
+        Principal: "*"
+        Action: execute-api:Invoke
+        Resource:
+          - execute-api:/*/*/*
+    minimumCompressionSize: ${ssm:minimumCompressionSizeInBytes}
+
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - logs:CreateLogGroup
+        - logs:CreateLogStream
+        - logs:PutLogEvents
+        - logs:DescribeLogStreams
+      Resource: "*"
+    - Effect: Allow
+      Action:
+        - sqs:*
+      Resource: "*"
+    - Effect: Allow
+      Action:
+        - s3:*
+      Resource: "*"
+    - Effect: Allow
+      Action:
+        - es:*
+      Resource: "*"
+
+functions:
+  exchangeNowAPI:
+    name: ${self:service}-${self:provider.stage}-api
+    handler: distribution/apiLambda.handler
+    memorySize: 1024
+    package:
+      patterns:
+        - "!**"
+        # Only native binary packages and their essential dependencies
+        - "node_modules/microtime/**"
+        - "node_modules/node-addon-api/**" # Microtime dependacy
+        - "node_modules/node-gyp-build/**" # Microtime dependacy
+        # Config files
+        - src/utilities/env.json
+        - src/utilities/override-env.json
+        - src/utilities/bot-admin-api-credentials.json
+        - src/utilities/db-credentials.json
+        - src/specs
+        - certificates/**
+    events:
+      - http:
+          method: any
+          path: /{proxy+}
+          cors: ${self:custom.cors-settings}
+          authorizer:
+            arn: ${self:custom.authorizerFunctionUrl}
+            resultTtlInSeconds: 0
+            type: request
+
+  blotterRebuildWorker:
+    name: ${self:service}-${self:provider.stage}-blotter-rebuild-worker
+    handler: distribution/workers/blotterRebuildWorker.handler
+    timeout: 900
+    build: false
+    events:
+      - schedule: rate(60 minutes)
+
+  archiveInactiveOrderWorker:
+    name: ${self:service}-${self:provider.stage}-archive-inactive-order
+    handler: distribution/workers/archiveInactiveOrderWorker.handler
+    timeout: 300
+    build: false
+    events:
+      - schedule: rate(4 hours)
+
+  fundsProcessor:
+    name: ${self:service}-${self:provider.stage}-funds-processor
+    handler: distribution/workers/fundsProcessorLambda.handler
+    timeout: 240
+    reservedConcurrency: 5
+    memorySize: 256
+    build: false
+    events:
+      - sqs:
+          arn:
+            Fn::GetAtt:
+              - FundsProcessorQueue
+              - Arn
+  fundsCheckerTimedRunner:
+    name: ${self:service}-${self:provider.stage}-funds-checker-timed-runner
+    handler: distribution/workers/fundsCheckerTimedRunner.handler
+    timeout: 900
+    build: false
+    events:
+      - schedule: cron(10 * ? * * *)
+      - schedule: cron(25 * ? * * *)
+      - schedule: cron(40 * ? * * *)
+      - schedule: cron(55 * ? * * *)
+  postProcessor:
+    name: ${self:service}-${self:provider.stage}-post-processor
+    handler: distribution/workers/PostProcessorLambda.handler
+    timeout: 450
+    reservedConcurrency: 5
+    memorySize: 256
+    build: false
+    events:
+      - sqs:
+          arn:
+            Fn::GetAtt:
+              - PostProcessorQueue
+              - Arn
+  autoExchangeWorker:
+    name: ${self:service}-${self:provider.stage}-auto-exchange-worker
+    handler: distribution/workers/autoExchangeWorker.handler
+    timeout: 900
+    build: false
+    events:
+      - schedule: rate(1 minute)
+  autoExchangeProcessor:
+    name: ${self:service}-${self:provider.stage}-auto-exchange-processor
+    handler: distribution/core/businessLogic/auto-exchange/AutoExchangeProcessor.handler
+    timeout: 450
+    reservedConcurrency: 5
+    memorySize: 256
+    build: false
+    events:
+      - sqs:
+          arn:
+            Fn::GetAtt:
+              - AutoExchangeProcessorQueue
+              - Arn
+resources:
+  Resources:
+    FundsProcessorQueue:
+      Type: AWS::SQS::Queue
+      Properties:
+        QueueName: ${self:service}-funds-processor-queue-${self:provider.stage}.fifo
+        VisibilityTimeout: 900
+        FifoQueue: true
+    
+    PostProcessorQueue:
+      Type: AWS::SQS::Queue
+      Properties:
+        QueueName: ${self:service}-post-processor-queue-${self:provider.stage}
+        VisibilityTimeout: 900
+
+    AutoExchangeProcessorQueue:
+      Type: AWS::SQS::Queue
+      Properties:
+        QueueName: ${self:service}-auto-exchange-processor-queue-${self:provider.stage}
+        VisibilityTimeout: 900
+
+    ApiGatewayRestApi:
+      Type: AWS::ApiGateway::RestApi
+      Properties:
+        Name: api-exchange-now-${self:provider.stage}
+
+    # This response is needed for custom authorizer failures cors support ¯\_(ツ)_/¯
+    DenyFailureGatewayResponse:
+      Type: "AWS::ApiGateway::GatewayResponse"
+      Properties:
+        RestApiId:
+          Ref: "ApiGatewayRestApi"
+        ResponseType: ACCESS_DENIED
+        StatusCode: "403"
+        ResponseTemplates:
+          application/json: |
+            {
+              "success":false,
+              "message":"$context.authorizer.message"
+            }
+        ResponseParameters:
+          gatewayresponse.header.x-action: "context.authorizer.xAction"
+          gatewayresponse.header.Access-Control-Allow-Origin: "'*'"
+          gatewayresponse.header.Access-Control-Allow-Headers: "'*'"
+
+    AuthFailureGatewayResponse:
+      Type: "AWS::ApiGateway::GatewayResponse"
+      Properties:
+        RestApiId:
+          Ref: "ApiGatewayRestApi"
+        ResponseType: AUTHORIZER_FAILURE
+        StatusCode: "401"
+        ResponseTemplates:
+          application/json: |
+            {
+              "code": 401,
+              "message": "Unauthorized"
+            }
+        ResponseParameters:
+          gatewayresponse.header.Access-Control-Allow-Origin: "'*'"
+          gatewayresponse.header.Access-Control-Allow-Headers: "'*'"
+
+    RateLimitedGatewayResponse:
+      Type: "AWS::ApiGateway::GatewayResponse"
+      Properties:
+        RestApiId:
+          Ref: "ApiGatewayRestApi"
+        ResponseType: UNAUTHORIZED
+        StatusCode: "429"
+        ResponseTemplates:
+          application/json: |
+            {
+              "code": 429,
+              "message": "Too many calls. Further attempts would also count as calls and would delay the cooldown. Contact support to request for a higher limit."
+            }
+        ResponseParameters:
+          gatewayresponse.header.Access-Control-Allow-Origin: "'*'"
+          gatewayresponse.header.Access-Control-Allow-Headers: "'*'"
+
+    WAFFilteredGatewayResponse:
+      Type: "AWS::ApiGateway::GatewayResponse"
+      Properties:
+        RestApiId:
+          Ref: "ApiGatewayRestApi"
+        ResponseType: WAF_FILTERED
+        StatusCode: "403"
+        ResponseTemplates:
+          application/json: |
+            {
+              "code": 403,
+              "message":"Request blocked"
+            }
+        ResponseParameters:
+          gatewayresponse.header.Access-Control-Allow-Origin: "'*'"
+          gatewayresponse.header.Access-Control-Allow-Headers: "'*'"
+
+    NotFoundGatewayResponse:
+      Type: "AWS::ApiGateway::GatewayResponse"
+      Properties:
+        RestApiId:
+          Ref: "ApiGatewayRestApi"
+        ResponseType: MISSING_AUTHENTICATION_TOKEN
+        StatusCode: "404"
+        ResponseTemplates:
+          application/json: |
+            {
+              "code": 404,
+              "message": "Endpoint not found or unsupported method"
+            }
+        ResponseParameters:
+          gatewayresponse.header.Access-Control-Allow-Origin: "'*'"
+          gatewayresponse.header.Access-Control-Allow-Headers: "'*'"

@@ -1,0 +1,16 @@
+{
+  "name": "marketplace-p8-trade-script",
+  "version": "1.0.0",
+  "description": "",
+  "main": "trades.p8.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "events": "^3.3.0",
+    "google-spreadsheet": "^3.2.0"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "timestamp": "2026-01-29T09:31:37.170Z",
+  "packageVersions": {
+    "vertoRedis": "8.0.1",
+    "mongoNumericals": "^4.0.1",
+    "mysqlNumericals": "^8.0.1",
+    "vertoNumericals": "^8.0.1"
+  },
+  "host": "master.valkey-poc-non-prod.pcfhkv.euc1.cache.amazonaws.com",
+  "port": "6379",
+  "environment": "valkey-numericals-test",
+  "summary": {
+    "total": 4,
+    "passed": 4,
+    "failed": 0,
+    "byCategory": {
+      "MySQL Distributed Numericals": {
+        "passed": 4,
+        "failed": 0
+      }
+    }
+  },
+  "results": [
+    {
+      "testName": "Basic number generation",
+      "category": "MySQL Distributed Numericals",
+      "passed": true,
+      "duration": 1793,
+      "details": {
+        "num1": 55,
+        "num2": 56,
+        "num3": 57,
+        "sequential": true
+      }
+    },
+    {
+      "testName": "Multiple sequences independence",
+      "category": "MySQL Distributed Numericals",
+      "passed": true,
+      "duration": 716,
+      "details": {
+        "sequence1": [
+          58,
+          59
+        ],
+        "sequence2": [
+          18,
+          19
+        ],
+        "independent": true
+      }
+    },
+    {
+      "testName": "Reference format validation",
+      "category": "MySQL Distributed Numericals",
+      "passed": true,
+      "duration": 401,
+      "details": {
+        "ref1": "LP-29012026-F20",
+        "ref2": "LP-29012026-F21",
+        "num1": 20,
+        "num2": 21,
+        "valid": true
+      }
+    },
+    {
+      "testName": "Sequential increment validation",
+      "category": "MySQL Distributed Numericals",
+      "passed": true,
+      "duration": 599,
+      "details": {
+        "num1": 60,
+        "num2": 61,
+        "num3": 62,
+        "sequential": true
+      }
+    }
+  ]
+}

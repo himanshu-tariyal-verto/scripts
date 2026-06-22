@@ -1,0 +1,50 @@
+{
+  "timestamp": "2026-01-29T04:22:12.008Z",
+  "host": "master.valkey-poc-non-prod.pcfhkv.euc1.cache.amazonaws.com",
+  "port": "6379",
+  "environment": "valkey-version-test",
+  "totalVersions": 5,
+  "completedTests": 1,
+  "failedTests": 4,
+  "results": [
+    {
+      "version": "5.0.0",
+      "description": "Current stable version",
+      "status": "completed",
+      "duration": 22709,
+      "timestamp": "2026-01-29T04:21:38.288Z"
+    },
+    {
+      "version": "5.0.1",
+      "description": "Latest patch",
+      "status": "failed",
+      "error": "Failed to install version 5.0.1: Command failed: npm install @verto-fx/verto-redis@5.0.1 --save-exact\nnpm error code ETARGET\nnpm error notarget No matching version found for @verto-fx/verto-redis@5.0.1.\nnpm error notarget In most cases you or one of your dependencies are requesting\nnpm error notarget a package version that doesn't exist.\nnpm error A complete log of this run can be found in: C:\\Users\\himanshutariyal\\AppData\\Local\\npm-cache\\_logs\\2026-01-29T04_21_44_291Z-debug-0.log\n",
+      "duration": 5879,
+      "timestamp": "2026-01-29T04:21:46.182Z"
+    },
+    {
+      "version": "4.0.0",
+      "description": "Previous major",
+      "status": "failed",
+      "error": "Failed to install version 4.0.0: Command failed: npm install @verto-fx/verto-redis@4.0.0 --save-exact\nnpm error code ETARGET\nnpm error notarget No matching version found for @verto-fx/verto-redis@4.0.0.\nnpm error notarget In most cases you or one of your dependencies are requesting\nnpm error notarget a package version that doesn't exist.\nnpm error A complete log of this run can be found in: C:\\Users\\himanshutariyal\\AppData\\Local\\npm-cache\\_logs\\2026-01-29T04_21_52_230Z-debug-0.log\n",
+      "duration": 6168,
+      "timestamp": "2026-01-29T04:21:54.360Z"
+    },
+    {
+      "version": "3.0.2",
+      "description": "Legacy exact version (mongo-distributed-numericals)",
+      "status": "failed",
+      "error": "Failed to install version 3.0.2: Command failed: npm install @verto-fx/verto-redis@3.0.2 --save-exact\nnpm error code ETARGET\nnpm error notarget No matching version found for @verto-fx/verto-redis@3.0.2.\nnpm error notarget In most cases you or one of your dependencies are requesting\nnpm error notarget a package version that doesn't exist.\nnpm error A complete log of this run can be found in: C:\\Users\\himanshutariyal\\AppData\\Local\\npm-cache\\_logs\\2026-01-29T04_22_00_538Z-debug-0.log\n",
+      "duration": 5788,
+      "timestamp": "2026-01-29T04:22:02.158Z"
+    },
+    {
+      "version": "1.5.0",
+      "description": "Legacy version (socket-service)",
+      "status": "failed",
+      "error": "Failed to install version 1.5.0: Command failed: npm install @verto-fx/verto-redis@1.5.0 --save-exact\nnpm error code ETARGET\nnpm error notarget No matching version found for @verto-fx/verto-redis@1.5.0.\nnpm error notarget In most cases you or one of your dependencies are requesting\nnpm error notarget a package version that doesn't exist.\nnpm error A complete log of this run can be found in: C:\\Users\\himanshutariyal\\AppData\\Local\\npm-cache\\_logs\\2026-01-29T04_22_08_111Z-debug-0.log\n",
+      "duration": 5844,
+      "timestamp": "2026-01-29T04:22:10.007Z"
+    }
+  ]
+}

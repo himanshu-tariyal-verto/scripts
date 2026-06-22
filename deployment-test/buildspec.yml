@@ -1,0 +1,38 @@
+version: 0.2
+
+env:
+  secrets-manager:
+    BUCKET_NAME: "api-testing-stack-secrets:s3BucketName"
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 20.x
+    commands:
+      - if [ -z "${ENV}" ]; then exit 1; fi
+      - if [ -z "${REGION}" ]; then exit 1; fi
+      - if [ -z "${INFRASTRUCTURE}" ]; then exit 1; fi
+      - if [ -z "${SERVERLESS_LICENSE_KEY}" ]; then exit 1; fi
+      - node --version
+      - npm --version
+      - python codebuild/copy-env.py ${ENV} ${REGION} ${INFRASTRUCTURE}
+      - python codebuild/copy-certificates.py ${ENV} ${REGION} ${INFRASTRUCTURE}
+      - npm install --legacy-peer-deps
+
+  build:
+    commands:
+      - infrastructure=${INFRASTRUCTURE}
+      - echo ${infrastructure}
+      - export infrastructure="$infrastructure"
+      - npm run build
+      - npm run test
+      - echo $GITHUB_REPOSITORY $GITHUB_REF_NAME
+      - npm run test:coverage
+      - aws s3 cp coverage s3://${BUCKET_NAME}/$GITHUB_REPOSITORY/branch/$GITHUB_REF_NAME --recursive
+
+  post_build:
+    commands:
+      - export SERVERLESS_LICENSE_KEY=${SERVERLESS_LICENSE_KEY}
+      - npx sequelize db:migrate --env ${ENV}
+      - npx serverless create_domain --stage ${ENV} --region ${REGION} --verbose
+      - npx serverless deploy --stage ${ENV} --region ${REGION} --verbose

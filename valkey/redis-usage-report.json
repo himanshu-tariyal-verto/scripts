@@ -1,0 +1,1896 @@
+{
+  "totalRepos": 201,
+  "reposWithPackageJson": 139,
+  "reposUsingRedis": 39,
+  "reposUsingVertoRedis": 37,
+  "reposUsingNonVertoRedis": 2,
+  "details": [
+    {
+      "repoName": "verto-company-service",
+      "repoUrl": "https://github.com/Verto-FX/verto-company-service",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [
+        "@verto-fx/verto-redis@^5.0.0"
+      ],
+      "usesVertoRedis": true,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-Engagement-service",
+      "repoUrl": "https://github.com/Verto-FX/verto-Engagement-service",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-socket-service",
+      "repoUrl": "https://github.com/Verto-FX/verto-socket-service",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [
+        "@verto-fx/verto-redis@^1.5.0"
+      ],
+      "usesVertoRedis": true,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-exchange-now-service",
+      "repoUrl": "https://github.com/Verto-FX/verto-exchange-now-service",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [
+        "@verto-fx/verto-redis@^5.0.0"
+      ],
+      "usesVertoRedis": true,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "ngx-summernote",
+      "repoUrl": "https://github.com/Verto-FX/ngx-summernote",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-microservice-api-testing",
+      "repoUrl": "https://github.com/Verto-FX/verto-microservice-api-testing",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-payments-orchestrator-service",
+      "repoUrl": "https://github.com/Verto-FX/verto-payments-orchestrator-service",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [
+        "@verto-fx/verto-redis@^5.0.0"
+      ],
+      "usesVertoRedis": true,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "ask-frank",
+      "repoUrl": "https://github.com/Verto-FX/ask-frank",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [
+        "@verto-fx/verto-redis@^5.0.0"
+      ],
+      "usesVertoRedis": true,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-analytics-dbt",
+      "repoUrl": "https://github.com/Verto-FX/verto-analytics-dbt",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-wallet-service",
+      "repoUrl": "https://github.com/Verto-FX/verto-wallet-service",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [
+        "@verto-fx/verto-redis@^5.0.0"
+      ],
+      "usesVertoRedis": true,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-notification",
+      "repoUrl": "https://github.com/Verto-FX/verto-notification",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-frontend",
+      "repoUrl": "https://github.com/Verto-FX/verto-frontend",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "onboarding-assistant",
+      "repoUrl": "https://github.com/Verto-FX/onboarding-assistant",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [
+        "@verto-fx/verto-redis@^5.0.0"
+      ],
+      "usesVertoRedis": true,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-payment-service",
+      "repoUrl": "https://github.com/Verto-FX/verto-payment-service",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [
+        "@verto-fx/verto-redis@^5.0.0"
+      ],
+      "usesVertoRedis": true,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "case-management-backend",
+      "repoUrl": "https://github.com/Verto-FX/case-management-backend",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [
+        "@verto-fx/verto-redis@^5.0.0"
+      ],
+      "usesVertoRedis": true,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "frank-test-suite",
+      "repoUrl": "https://github.com/Verto-FX/frank-test-suite",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-currency-service",
+      "repoUrl": "https://github.com/Verto-FX/verto-currency-service",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [
+        "@verto-fx/verto-redis@^5.0.0"
+      ],
+      "usesVertoRedis": true,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-readme-docs",
+      "repoUrl": "https://github.com/Verto-FX/verto-readme-docs",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-otc-service",
+      "repoUrl": "https://github.com/Verto-FX/verto-otc-service",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [
+        "@verto-fx/verto-redis@^5.0.0"
+      ],
+      "usesVertoRedis": true,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-mobile",
+      "repoUrl": "https://github.com/Verto-FX/verto-mobile",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-backend",
+      "repoUrl": "https://github.com/Verto-FX/verto-backend",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [
+        "@verto-fx/verto-redis@^5.0.0"
+      ],
+      "usesVertoRedis": true,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-treasury-service",
+      "repoUrl": "https://github.com/Verto-FX/verto-treasury-service",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [
+        "@verto-fx/verto-redis@^5.0.0"
+      ],
+      "usesVertoRedis": true,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-marketplace-service",
+      "repoUrl": "https://github.com/Verto-FX/verto-marketplace-service",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [
+        "@verto-fx/verto-redis@^5.0.0"
+      ],
+      "usesVertoRedis": true,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-authorizer-v3",
+      "repoUrl": "https://github.com/Verto-FX/verto-authorizer-v3",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [
+        "@verto-fx/verto-redis@^5.0.0"
+      ],
+      "usesVertoRedis": true,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-payments-automation-service",
+      "repoUrl": "https://github.com/Verto-FX/verto-payments-automation-service",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [
+        "@verto-fx/verto-redis@^5.0.0"
+      ],
+      "usesVertoRedis": true,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-ledger-service",
+      "repoUrl": "https://github.com/Verto-FX/verto-ledger-service",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [
+        "@verto-fx/verto-redis@^5.0.0"
+      ],
+      "usesVertoRedis": true,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-blotter-service",
+      "repoUrl": "https://github.com/Verto-FX/verto-blotter-service",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-referrals-service",
+      "repoUrl": "https://github.com/Verto-FX/verto-referrals-service",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-beneficiary-service",
+      "repoUrl": "https://github.com/Verto-FX/verto-beneficiary-service",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [
+        "@verto-fx/verto-redis@^5.0.0"
+      ],
+      "usesVertoRedis": true,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-liquidity-engine",
+      "repoUrl": "https://github.com/Verto-FX/verto-liquidity-engine",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [
+        "@verto-fx/verto-redis@^5.0.0"
+      ],
+      "usesVertoRedis": true,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-subscription-service",
+      "repoUrl": "https://github.com/Verto-FX/verto-subscription-service",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [
+        "@verto-fx/verto-redis@^5.0.0"
+      ],
+      "usesVertoRedis": true,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-cards-api",
+      "repoUrl": "https://github.com/Verto-FX/verto-cards-api",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [
+        "@verto-fx/verto-redis@^5.0.0"
+      ],
+      "usesVertoRedis": true,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-company-sdk",
+      "repoUrl": "https://github.com/Verto-FX/verto-company-sdk",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [
+        "@verto-fx/verto-redis@^5.0.0"
+      ],
+      "usesVertoRedis": true,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "resistant-ai-webhook-simulator",
+      "repoUrl": "https://github.com/Verto-FX/resistant-ai-webhook-simulator",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-logs-pipeline",
+      "repoUrl": "https://github.com/Verto-FX/verto-logs-pipeline",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-blotter-sdk",
+      "repoUrl": "https://github.com/Verto-FX/verto-blotter-sdk",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-currency-sdk",
+      "repoUrl": "https://github.com/Verto-FX/verto-currency-sdk",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [
+        "@verto-fx/verto-redis@^5.0.0"
+      ],
+      "usesVertoRedis": true,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "mongo-distributed-numericals",
+      "repoUrl": "https://github.com/Verto-FX/mongo-distributed-numericals",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [
+        "@verto-fx/verto-redis@3.0.2"
+      ],
+      "usesVertoRedis": true,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-event-bus-sdk",
+      "repoUrl": "https://github.com/Verto-FX/verto-event-bus-sdk",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "mysql-distributed-numericals",
+      "repoUrl": "https://github.com/Verto-FX/mysql-distributed-numericals",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [
+        "@verto-fx/verto-redis@^5.0.0"
+      ],
+      "usesVertoRedis": true,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-cached-utilities",
+      "repoUrl": "https://github.com/Verto-FX/verto-cached-utilities",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [
+        "@verto-fx/verto-redis@^5.0.0"
+      ],
+      "usesVertoRedis": true,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-user-api",
+      "repoUrl": "https://github.com/Verto-FX/verto-user-api",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-openapi-validation",
+      "repoUrl": "https://github.com/Verto-FX/verto-openapi-validation",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-ledger-sdk",
+      "repoUrl": "https://github.com/Verto-FX/verto-ledger-sdk",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-queuing",
+      "repoUrl": "https://github.com/Verto-FX/verto-queuing",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-redis",
+      "repoUrl": "https://github.com/Verto-FX/verto-redis",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [
+        "ioredis@^5.0.4"
+      ],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": true
+    },
+    {
+      "repoName": "mongo-adapter",
+      "repoUrl": "https://github.com/Verto-FX/mongo-adapter",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-logging",
+      "repoUrl": "https://github.com/Verto-FX/verto-logging",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-swap-ui",
+      "repoUrl": "https://github.com/Verto-FX/verto-swap-ui",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-file-service-sdk",
+      "repoUrl": "https://github.com/Verto-FX/verto-file-service-sdk",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-onboarding-service",
+      "repoUrl": "https://github.com/Verto-FX/verto-onboarding-service",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [
+        "@verto-fx/verto-redis@^5.0.0"
+      ],
+      "usesVertoRedis": true,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-authorizer-v2",
+      "repoUrl": "https://github.com/Verto-FX/verto-authorizer-v2",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [
+        "@verto-fx/verto-redis@^5.0.0"
+      ],
+      "usesVertoRedis": true,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-express-openapi-validator",
+      "repoUrl": "https://github.com/Verto-FX/verto-express-openapi-validator",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-countries",
+      "repoUrl": "https://github.com/Verto-FX/verto-countries",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-utilities",
+      "repoUrl": "https://github.com/Verto-FX/verto-utilities",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-api-webhooks",
+      "repoUrl": "https://github.com/Verto-FX/verto-api-webhooks",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [
+        "@verto-fx/verto-redis@^5.0.0"
+      ],
+      "usesVertoRedis": true,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-event-bus-webhooks",
+      "repoUrl": "https://github.com/Verto-FX/verto-event-bus-webhooks",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [
+        "@verto-fx/verto-redis@^5.0.0"
+      ],
+      "usesVertoRedis": true,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "aws-codebuild-run-build",
+      "repoUrl": "https://github.com/Verto-FX/aws-codebuild-run-build",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-cloud-scripts",
+      "repoUrl": "https://github.com/Verto-FX/verto-cloud-scripts",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "appium_script_agent",
+      "repoUrl": "https://github.com/Verto-FX/appium_script_agent",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-onboarding-service-sdk",
+      "repoUrl": "https://github.com/Verto-FX/verto-onboarding-service-sdk",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-invoice-service",
+      "repoUrl": "https://github.com/Verto-FX/verto-invoice-service",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [
+        "@verto-fx/verto-redis@^5.0.0"
+      ],
+      "usesVertoRedis": true,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "swap-components",
+      "repoUrl": "https://github.com/Verto-FX/swap-components",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-event-bus",
+      "repoUrl": "https://github.com/Verto-FX/verto-event-bus",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [
+        "@verto-fx/verto-redis@^5.0.0"
+      ],
+      "usesVertoRedis": true,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "deep-research-agent-plugin",
+      "repoUrl": "https://github.com/Verto-FX/deep-research-agent-plugin",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-customer-api-usage-report",
+      "repoUrl": "https://github.com/Verto-FX/verto-customer-api-usage-report",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [
+        "@verto-fx/verto-redis@^5.0.0"
+      ],
+      "usesVertoRedis": true,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-github-workflows",
+      "repoUrl": "https://github.com/Verto-FX/verto-github-workflows",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "website-analyzer",
+      "repoUrl": "https://github.com/Verto-FX/website-analyzer",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-paybylink-api",
+      "repoUrl": "https://github.com/Verto-FX/verto-paybylink-api",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [
+        "@verto-fx/verto-redis@^5.0.0"
+      ],
+      "usesVertoRedis": true,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-api-certification-service",
+      "repoUrl": "https://github.com/Verto-FX/verto-api-certification-service",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [
+        "@verto-fx/verto-redis@^5.0.0"
+      ],
+      "usesVertoRedis": true,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-codebuild-node24-image",
+      "repoUrl": "https://github.com/Verto-FX/verto-codebuild-node24-image",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-axios-wrapper",
+      "repoUrl": "https://github.com/Verto-FX/verto-axios-wrapper",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "vpc-endpoint",
+      "repoUrl": "https://github.com/Verto-FX/vpc-endpoint",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "document-extractor-plugin",
+      "repoUrl": "https://github.com/Verto-FX/document-extractor-plugin",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-pdf-generator",
+      "repoUrl": "https://github.com/Verto-FX/verto-pdf-generator",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "website-v3",
+      "repoUrl": "https://github.com/Verto-FX/website-v3",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-git-sync-automation",
+      "repoUrl": "https://github.com/Verto-FX/verto-git-sync-automation",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-reports",
+      "repoUrl": "https://github.com/Verto-FX/verto-reports",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [
+        "@verto-fx/verto-redis@1.1.20-beta.2"
+      ],
+      "usesVertoRedis": true,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-mobile-service",
+      "repoUrl": "https://github.com/Verto-FX/verto-mobile-service",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "business-address-plugin",
+      "repoUrl": "https://github.com/Verto-FX/business-address-plugin",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "business-identity-plugin",
+      "repoUrl": "https://github.com/Verto-FX/business-identity-plugin",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "business-operations-plugin",
+      "repoUrl": "https://github.com/Verto-FX/business-operations-plugin",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "shareholder-kyc-plugin",
+      "repoUrl": "https://github.com/Verto-FX/shareholder-kyc-plugin",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-screening-agent",
+      "repoUrl": "https://github.com/Verto-FX/verto-screening-agent",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "rai_plugin_onboarding",
+      "repoUrl": "https://github.com/Verto-FX/rai_plugin_onboarding",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-onboarding-assistant-overall-analysis-plugin",
+      "repoUrl": "https://github.com/Verto-FX/verto-onboarding-assistant-overall-analysis-plugin",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "ask-frank-orchestrator",
+      "repoUrl": "https://github.com/Verto-FX/ask-frank-orchestrator",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "mobile-custom-plugin",
+      "repoUrl": "https://github.com/Verto-FX/mobile-custom-plugin",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "mobile-custom-packages",
+      "repoUrl": "https://github.com/Verto-FX/mobile-custom-packages",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-gh-code-backup",
+      "repoUrl": "https://github.com/Verto-FX/verto-gh-code-backup",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-frank-code-reviewer",
+      "repoUrl": "https://github.com/Verto-FX/verto-frank-code-reviewer",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-exchange-platform",
+      "repoUrl": "https://github.com/Verto-FX/verto-exchange-platform",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-distributed-numericals",
+      "repoUrl": "https://github.com/Verto-FX/verto-distributed-numericals",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "duco-reports-uploader",
+      "repoUrl": "https://github.com/Verto-FX/duco-reports-uploader",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-files-service",
+      "repoUrl": "https://github.com/Verto-FX/verto-files-service",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-mongo-indexes",
+      "repoUrl": "https://github.com/Verto-FX/verto-mongo-indexes",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-cfsb-translator",
+      "repoUrl": "https://github.com/Verto-FX/verto-cfsb-translator",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-cfsb",
+      "repoUrl": "https://github.com/Verto-FX/verto-cfsb",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [
+        "@verto-fx/verto-redis@^5.0.0"
+      ],
+      "usesVertoRedis": true,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "fuzzy-name-matcher",
+      "repoUrl": "https://github.com/Verto-FX/fuzzy-name-matcher",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "devsec-test-repo",
+      "repoUrl": "https://github.com/Verto-FX/devsec-test-repo",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-codebuild-node20-image",
+      "repoUrl": "https://github.com/Verto-FX/verto-codebuild-node20-image",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "api-docs",
+      "repoUrl": "https://github.com/Verto-FX/api-docs",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-misc-scripts",
+      "repoUrl": "https://github.com/Verto-FX/verto-misc-scripts",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-db-changelog-notifier",
+      "repoUrl": "https://github.com/Verto-FX/verto-db-changelog-notifier",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "compliance-stack",
+      "repoUrl": "https://github.com/Verto-FX/compliance-stack",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-docker-images",
+      "repoUrl": "https://github.com/Verto-FX/verto-docker-images",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-service-dependency-map",
+      "repoUrl": "https://github.com/Verto-FX/verto-service-dependency-map",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-test-reports-ui",
+      "repoUrl": "https://github.com/Verto-FX/verto-test-reports-ui",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-apis-shell",
+      "repoUrl": "https://github.com/Verto-FX/verto-apis-shell",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-devops",
+      "repoUrl": "https://github.com/Verto-FX/verto-devops",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-github-event-notifier",
+      "repoUrl": "https://github.com/Verto-FX/verto-github-event-notifier",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "service-lambda-template",
+      "repoUrl": "https://github.com/Verto-FX/service-lambda-template",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-aws-privileged-actions-monitor",
+      "repoUrl": "https://github.com/Verto-FX/verto-aws-privileged-actions-monitor",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "hrr-backend",
+      "repoUrl": "https://github.com/Verto-FX/hrr-backend",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "hacathon-code-blooded",
+      "repoUrl": "https://github.com/Verto-FX/hacathon-code-blooded",
+      "isArchived": true,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "fincrime-analysis-service",
+      "repoUrl": "https://github.com/Verto-FX/fincrime-analysis-service",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "fincrime-analysis-agent",
+      "repoUrl": "https://github.com/Verto-FX/fincrime-analysis-agent",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-ngx-summernote",
+      "repoUrl": "https://github.com/Verto-FX/verto-ngx-summernote",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "adk-pop-hack",
+      "repoUrl": "https://github.com/Verto-FX/adk-pop-hack",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "carta-reports",
+      "repoUrl": "https://github.com/Verto-FX/carta-reports",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-rotate-botadmin-keys",
+      "repoUrl": "https://github.com/Verto-FX/verto-rotate-botadmin-keys",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-gh-branch-protection-monitor",
+      "repoUrl": "https://github.com/Verto-FX/verto-gh-branch-protection-monitor",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-jmeter-load-testing",
+      "repoUrl": "https://github.com/Verto-FX/verto-jmeter-load-testing",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-automation-test-scheduler",
+      "repoUrl": "https://github.com/Verto-FX/verto-automation-test-scheduler",
+      "isArchived": true,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-black-cat",
+      "repoUrl": "https://github.com/Verto-FX/verto-black-cat",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "website-analyzer-client",
+      "repoUrl": "https://github.com/Verto-FX/website-analyzer-client",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-scheduling-service",
+      "repoUrl": "https://github.com/Verto-FX/verto-scheduling-service",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-mobile-automation",
+      "repoUrl": "https://github.com/Verto-FX/verto-mobile-automation",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-ui-automation",
+      "repoUrl": "https://github.com/Verto-FX/verto-ui-automation",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-platform-log-events",
+      "repoUrl": "https://github.com/Verto-FX/verto-platform-log-events",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-crypto-wallet-service",
+      "repoUrl": "https://github.com/Verto-FX/verto-crypto-wallet-service",
+      "isArchived": true,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "onboarding-agent",
+      "repoUrl": "https://github.com/Verto-FX/onboarding-agent",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "frank-inspector",
+      "repoUrl": "https://github.com/Verto-FX/frank-inspector",
+      "isArchived": true,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "persistent-apis",
+      "repoUrl": "https://github.com/Verto-FX/persistent-apis",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [
+        "ioredis@^4.28.3"
+      ],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": true
+    },
+    {
+      "repoName": "fcmb-token-genarator",
+      "repoUrl": "https://github.com/Verto-FX/fcmb-token-genarator",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "playwright-mcp",
+      "repoUrl": "https://github.com/Verto-FX/playwright-mcp",
+      "isArchived": true,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-ui-logging",
+      "repoUrl": "https://github.com/Verto-FX/verto-ui-logging",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "VertoFXWebsite",
+      "repoUrl": "https://github.com/Verto-FX/VertoFXWebsite",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "ng-universal",
+      "repoUrl": "https://github.com/Verto-FX/ng-universal",
+      "isArchived": true,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-crypto-custodian-service",
+      "repoUrl": "https://github.com/Verto-FX/verto-crypto-custodian-service",
+      "isArchived": true,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "spec-review",
+      "repoUrl": "https://github.com/Verto-FX/spec-review",
+      "isArchived": true,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-configuration",
+      "repoUrl": "https://github.com/Verto-FX/verto-configuration",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "api-spec-review-bot",
+      "repoUrl": "https://github.com/Verto-FX/api-spec-review-bot",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-builder-service",
+      "repoUrl": "https://github.com/Verto-FX/verto-builder-service",
+      "isArchived": true,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-iban-generator",
+      "repoUrl": "https://github.com/Verto-FX/verto-iban-generator",
+      "isArchived": true,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-api-pm-automation",
+      "repoUrl": "https://github.com/Verto-FX/verto-api-pm-automation",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-tech-ops-pocs",
+      "repoUrl": "https://github.com/Verto-FX/verto-tech-ops-pocs",
+      "isArchived": true,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-secret-scanning-function",
+      "repoUrl": "https://github.com/Verto-FX/verto-secret-scanning-function",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "api-portal",
+      "repoUrl": "https://github.com/Verto-FX/api-portal",
+      "isArchived": true,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "Website-Templates",
+      "repoUrl": "https://github.com/Verto-FX/Website-Templates",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "VGS_POC",
+      "repoUrl": "https://github.com/Verto-FX/VGS_POC",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "authentication-samples",
+      "repoUrl": "https://github.com/Verto-FX/authentication-samples",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-xt-simulator",
+      "repoUrl": "https://github.com/Verto-FX/verto-xt-simulator",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-knowledgebase",
+      "repoUrl": "https://github.com/Verto-FX/verto-knowledgebase",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "liquidity-pools",
+      "repoUrl": "https://github.com/Verto-FX/liquidity-pools",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-secrets-rotator",
+      "repoUrl": "https://github.com/Verto-FX/verto-secrets-rotator",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "clam-av-s3-scanner",
+      "repoUrl": "https://github.com/Verto-FX/clam-av-s3-scanner",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-reporting-queries",
+      "repoUrl": "https://github.com/Verto-FX/verto-reporting-queries",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "flutter_amplify",
+      "repoUrl": "https://github.com/Verto-FX/flutter_amplify",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "security-automation",
+      "repoUrl": "https://github.com/Verto-FX/security-automation",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-email-templates",
+      "repoUrl": "https://github.com/Verto-FX/verto-email-templates",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "payments-orchestrator",
+      "repoUrl": "https://github.com/Verto-FX/payments-orchestrator",
+      "isArchived": true,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "database-users",
+      "repoUrl": "https://github.com/Verto-FX/database-users",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "frank",
+      "repoUrl": "https://github.com/Verto-FX/frank",
+      "isArchived": true,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "website-V3-lambda",
+      "repoUrl": "https://github.com/Verto-FX/website-V3-lambda",
+      "isArchived": true,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "website-V3-lambda-function",
+      "repoUrl": "https://github.com/Verto-FX/website-V3-lambda-function",
+      "isArchived": true,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-forex-api",
+      "repoUrl": "https://github.com/Verto-FX/verto-forex-api",
+      "isArchived": true,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-powerbi-service",
+      "repoUrl": "https://github.com/Verto-FX/verto-powerbi-service",
+      "isArchived": true,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "count-loc",
+      "repoUrl": "https://github.com/Verto-FX/count-loc",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "release-checks",
+      "repoUrl": "https://github.com/Verto-FX/release-checks",
+      "isArchived": true,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-tests-platform",
+      "repoUrl": "https://github.com/Verto-FX/verto-tests-platform",
+      "isArchived": true,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-mparticle-sdk",
+      "repoUrl": "https://github.com/Verto-FX/verto-mparticle-sdk",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-fx-widget",
+      "repoUrl": "https://github.com/Verto-FX/verto-fx-widget",
+      "isArchived": true,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-compliance-service",
+      "repoUrl": "https://github.com/Verto-FX/verto-compliance-service",
+      "isArchived": true,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-webhook-forwarder",
+      "repoUrl": "https://github.com/Verto-FX/verto-webhook-forwarder",
+      "isArchived": true,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "vertofx-website-v2",
+      "repoUrl": "https://github.com/Verto-FX/vertofx-website-v2",
+      "isArchived": true,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-notifications",
+      "repoUrl": "https://github.com/Verto-FX/verto-notifications",
+      "isArchived": true,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "vfx-queries",
+      "repoUrl": "https://github.com/Verto-FX/vfx-queries",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "blog-engine",
+      "repoUrl": "https://github.com/Verto-FX/blog-engine",
+      "isArchived": true,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "gitbackup",
+      "repoUrl": "https://github.com/Verto-FX/gitbackup",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-server-queries",
+      "repoUrl": "https://github.com/Verto-FX/verto-server-queries",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-hightouch-queries",
+      "repoUrl": "https://github.com/Verto-FX/verto-hightouch-queries",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-payment-methods",
+      "repoUrl": "https://github.com/Verto-FX/verto-payment-methods",
+      "isArchived": true,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-ledger-import",
+      "repoUrl": "https://github.com/Verto-FX/verto-ledger-import",
+      "isArchived": true,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-fis-implementation",
+      "repoUrl": "https://github.com/Verto-FX/verto-fis-implementation",
+      "isArchived": true,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-micro-frontend",
+      "repoUrl": "https://github.com/Verto-FX/verto-micro-frontend",
+      "isArchived": true,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "UiAutomation",
+      "repoUrl": "https://github.com/Verto-FX/UiAutomation",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "case-management-frontend",
+      "repoUrl": "https://github.com/Verto-FX/case-management-frontend",
+      "isArchived": true,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-api-automation",
+      "repoUrl": "https://github.com/Verto-FX/verto-api-automation",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "test-reports",
+      "repoUrl": "https://github.com/Verto-FX/test-reports",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-flutter-app",
+      "repoUrl": "https://github.com/Verto-FX/verto-flutter-app",
+      "isArchived": true,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "amazon-elasticsearch-service-with-cognito",
+      "repoUrl": "https://github.com/Verto-FX/amazon-elasticsearch-service-with-cognito",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-google-analytics",
+      "repoUrl": "https://github.com/Verto-FX/verto-google-analytics",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-ml",
+      "repoUrl": "https://github.com/Verto-FX/verto-ml",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-api",
+      "repoUrl": "https://github.com/Verto-FX/verto-api",
+      "isArchived": true,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "email-templates",
+      "repoUrl": "https://github.com/Verto-FX/email-templates",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-landing-site",
+      "repoUrl": "https://github.com/Verto-FX/verto-landing-site",
+      "isArchived": true,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "currencycloud-js",
+      "repoUrl": "https://github.com/Verto-FX/currencycloud-js",
+      "isArchived": false,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "verto-v2-glacier",
+      "repoUrl": "https://github.com/Verto-FX/verto-v2-glacier",
+      "isArchived": false,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "UI_Automation",
+      "repoUrl": "https://github.com/Verto-FX/UI_Automation",
+      "isArchived": true,
+      "hasPackageJson": false,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    },
+    {
+      "repoName": "analytics-engine",
+      "repoUrl": "https://github.com/Verto-FX/analytics-engine",
+      "isArchived": true,
+      "hasPackageJson": true,
+      "redisPackages": [],
+      "usesVertoRedis": false,
+      "usesNonVertoRedis": false
+    }
+  ]
+}

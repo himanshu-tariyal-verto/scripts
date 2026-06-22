@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Environment files
+.env
+.env.*
+
+# Logs
+logs/
+*.log
+
+# Credentials / secrets
+key.json
+
+# Deployment temp logs
+deployment-test/templogs
+
+# Script results
+verto-misc-scripts/results/
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# TypeScript cache
+*.tsbuildinfo
+
+
+# Credentials / secrets
+key.json
+*-credentials.json
+override-env.json
+sequelize-migration-config.json

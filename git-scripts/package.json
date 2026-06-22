@@ -1,0 +1,14 @@
+{
+  "name": "git-scripts",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "reset-env.js",
+  "scripts": {
+    "redeploy": "node ./src/redeploy-env.js > ./logs/redeploy-logs.txt 2>&1",
+    "backup": "node ./src/create-backup-branches.js > ./logs/backup-logs.txt 2>&1",
+    "reset": "node ./src/reset-env.js > ./logs/reset-logs.txt 2>&1"
+  }
+}

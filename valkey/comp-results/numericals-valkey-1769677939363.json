@@ -1,0 +1,63 @@
+{
+  "timestamp": "2026-01-29T09:12:19.363Z",
+  "packageVersions": {
+    "vertoRedis": "^5.0.0",
+    "mongoNumericals": "^4.0.1",
+    "mysqlNumericals": "^8.0.1",
+    "vertoNumericals": "^8.0.1"
+  },
+  "host": "master.valkey-poc-non-prod.pcfhkv.euc1.cache.amazonaws.com",
+  "port": "6379",
+  "environment": "valkey-numericals-test",
+  "summary": {
+    "total": 4,
+    "passed": 1,
+    "failed": 3,
+    "byCategory": {
+      "MySQL Distributed Numericals": {
+        "passed": 1,
+        "failed": 3
+      }
+    }
+  },
+  "results": [
+    {
+      "testName": "Basic number generation",
+      "category": "MySQL Distributed Numericals",
+      "passed": false,
+      "duration": 9,
+      "error": "No config found, please use ConfigurationManager.init() for setup"
+    },
+    {
+      "testName": "Multiple sequences independence",
+      "category": "MySQL Distributed Numericals",
+      "passed": true,
+      "duration": 1303,
+      "details": {
+        "sequence1": [
+          null,
+          null
+        ],
+        "sequence2": [
+          null,
+          null
+        ],
+        "independent": false
+      }
+    },
+    {
+      "testName": "Reference format validation",
+      "category": "MySQL Distributed Numericals",
+      "passed": false,
+      "duration": 362,
+      "error": "References not sequential: NaN, NaN"
+    },
+    {
+      "testName": "Sequential increment validation",
+      "category": "MySQL Distributed Numericals",
+      "passed": false,
+      "duration": 509,
+      "error": "Numbers not sequential: NaN, NaN, NaN"
+    }
+  ]
+}

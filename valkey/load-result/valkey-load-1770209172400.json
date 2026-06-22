@@ -1,0 +1,265 @@
+{
+  "timestamp": "2026-02-04T12:47:08.478Z",
+  "host": "master.valkey-poc-non-prod.pcfhkv.euc1.cache.amazonaws.com:6379",
+  "port": "6379",
+  "environment": "valkey-test",
+  "summary": {
+    "total": 17,
+    "passed": 17,
+    "failed": 0,
+    "byCategory": {
+      "Performance Benchmarks": {
+        "passed": 4,
+        "failed": 0
+      },
+      "Concurrent Operations": {
+        "passed": 4,
+        "failed": 0
+      },
+      "High Volume Operations": {
+        "passed": 3,
+        "failed": 0
+      },
+      "Connection Resilience": {
+        "passed": 2,
+        "failed": 0
+      },
+      "Memory Pressure": {
+        "passed": 2,
+        "failed": 0
+      },
+      "Sustained Load": {
+        "passed": 2,
+        "failed": 0
+      }
+    }
+  },
+  "results": [
+    {
+      "testName": "SET operation latency",
+      "category": "Performance Benchmarks",
+      "passed": true,
+      "duration": 982,
+      "details": {
+        "operations": 1000,
+        "totalDuration": 979.3078570000005,
+        "avgLatency": 0.9793078570000004,
+        "p50": 0.76099,
+        "p95": 1.450585,
+        "p99": 4.905248,
+        "throughput": 1021.1293546274485
+      }
+    },
+    {
+      "testName": "GET operation latency",
+      "category": "Performance Benchmarks",
+      "passed": true,
+      "duration": 959,
+      "details": {
+        "operations": 1000,
+        "totalDuration": 897.695622,
+        "avgLatency": 0.897695622,
+        "p50": 0.726227,
+        "p95": 1.332793,
+        "p99": 2.950869,
+        "throughput": 1113.9633250879328
+      }
+    },
+    {
+      "testName": "MSET operation throughput",
+      "category": "Performance Benchmarks",
+      "passed": true,
+      "duration": 115,
+      "details": {
+        "operations": 1000,
+        "batches": 100,
+        "totalDuration": 114.42738600000004,
+        "avgLatency": 1.1442738600000004,
+        "p50": 0.905525,
+        "p95": 1.957891,
+        "p99": 7.041281,
+        "throughput": 8739.166688645668
+      }
+    },
+    {
+      "testName": "Lua script execution latency",
+      "category": "Performance Benchmarks",
+      "passed": true,
+      "duration": 900,
+      "details": {
+        "operations": 1000,
+        "totalDuration": 897.0336720000014,
+        "avgLatency": 0.8970336720000014,
+        "p50": 0.750693,
+        "p95": 1.385488,
+        "p99": 2.531442,
+        "throughput": 1114.7853544565698
+      }
+    },
+    {
+      "testName": "Concurrent SET operations (25 parallel)",
+      "category": "Concurrent Operations",
+      "passed": true,
+      "duration": 4,
+      "details": {
+        "count": 25,
+        "successCount": 25,
+        "duration": 1,
+        "throughput": 25000
+      }
+    },
+    {
+      "testName": "Concurrent lock attempts",
+      "category": "Concurrent Operations",
+      "passed": true,
+      "duration": 153,
+      "details": {
+        "attempts": 10,
+        "succeeded": 1,
+        "failed": 9,
+        "duration": 151
+      }
+    },
+    {
+      "testName": "Concurrent reference generation (10 parallel)",
+      "category": "Concurrent Operations",
+      "passed": true,
+      "duration": 405,
+      "details": {
+        "refKey": "valkey-load-1770209172401-concurrent-ref",
+        "concurrentCount": 10,
+        "uniqueCount": 10,
+        "duration": 404
+      }
+    },
+    {
+      "testName": "Mixed operations under load (50 parallel)",
+      "category": "Concurrent Operations",
+      "passed": true,
+      "duration": 3,
+      "details": {
+        "operations": 50,
+        "succeeded": 50,
+        "failed": 0,
+        "duration": 3,
+        "throughput": 16666.666666666668
+      }
+    },
+    {
+      "testName": "Bulk insert 1000 keys",
+      "category": "High Volume Operations",
+      "passed": true,
+      "duration": 25,
+      "details": {
+        "count": 1000,
+        "duration": 19,
+        "throughput": 52631.57894736842,
+        "sampleSize": 100,
+        "sampleSuccess": 100
+      }
+    },
+    {
+      "testName": "Bulk read 1000 keys",
+      "category": "High Volume Operations",
+      "passed": true,
+      "duration": 4,
+      "details": {
+        "count": 1000,
+        "retrieved": 1000,
+        "duration": 4,
+        "throughput": 250000
+      }
+    },
+    {
+      "testName": "Pattern-based key scan",
+      "category": "High Volume Operations",
+      "passed": true,
+      "duration": 23,
+      "details": {
+        "pattern": "valkey-load-1770209172401:bulk:*",
+        "keysFound": 1000,
+        "duration": 23
+      }
+    },
+    {
+      "testName": "Connection pool stress (100 parallel ops)",
+      "category": "Connection Resilience",
+      "passed": true,
+      "duration": 10,
+      "details": {
+        "operations": 100,
+        "succeeded": 100,
+        "failed": 0,
+        "verifySuccess": 100,
+        "duration": 7,
+        "throughput": 14285.714285714286
+      }
+    },
+    {
+      "testName": "Rapid sequential operations (100 ops)",
+      "category": "Connection Resilience",
+      "passed": true,
+      "duration": 103,
+      "details": {
+        "operations": 100,
+        "duration": 102,
+        "opsPerSecond": 980.3921568627451
+      }
+    },
+    {
+      "testName": "Large value storage (1MB values)",
+      "category": "Memory Pressure",
+      "passed": true,
+      "duration": 97,
+      "details": {
+        "valueSize": "1MB",
+        "count": 5,
+        "successCount": 5,
+        "evictedCount": 0,
+        "duration": 49,
+        "totalMemory": "5MB"
+      }
+    },
+    {
+      "testName": "Key count scalability (1000 keys)",
+      "category": "Memory Pressure",
+      "passed": true,
+      "duration": 56,
+      "details": {
+        "count": 1000,
+        "insertDuration": 35,
+        "scanDuration": 21,
+        "keysFound": 1000,
+        "insertThroughput": 28571.428571428572
+      }
+    },
+    {
+      "testName": "Sustained write load (30 seconds)",
+      "category": "Sustained Load",
+      "passed": true,
+      "duration": 30000,
+      "details": {
+        "durationSeconds": 30,
+        "totalOperations": 313480,
+        "batches": 31348,
+        "opsPerSecond": 10449.333333333334
+      }
+    },
+    {
+      "testName": "Mixed read/write load (20 seconds)",
+      "category": "Sustained Load",
+      "passed": true,
+      "duration": 20002,
+      "details": {
+        "durationSeconds": 20,
+        "totalOperations": 24408,
+        "reads": 17082,
+        "writes": 7326,
+        "readSuccesses": 17082,
+        "writeSuccesses": 7326,
+        "opsPerSecond": 1220.3999999999999,
+        "readWriteRatio": "70/30"
+      }
+    }
+  ]
+}

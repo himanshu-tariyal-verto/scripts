@@ -1,0 +1,31 @@
+{
+  "name": "valkey",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start-comp": "tsc && node dist/valkey-compatibility-test.js",
+    "start-load": "tsc && node dist/valkey-load-test.js",
+    "test-numericals": "tsc && node dist/distributed-numericals-test.js",
+    "test-versions": "tsc && node dist/test-verto-redis-versions.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.10",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@verto-fx/mongo-distributed-numericals": "^4.0.1",
+    "@verto-fx/mysql-distributed-numericals": "^8.0.1",
+    "@verto-fx/verto-distributed-numericals": "^8.0.1",
+    "@verto-fx/verto-logging": "^8.0.1",
+    "@verto-fx/verto-redis": "8.0.1",
+    "@verto-fx/verto-utilities": "^8.0.1"
+  }
+}

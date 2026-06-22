@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-01-29T09:09:26.374Z",
+  "packageVersions": {
+    "vertoRedis": "^5.0.0",
+    "mongoNumericals": "^4.0.1",
+    "mysqlNumericals": "^8.0.1",
+    "vertoNumericals": "^8.0.1"
+  },
+  "host": "master.valkey-poc-non-prod.pcfhkv.euc1.cache.amazonaws.com",
+  "port": "6379",
+  "environment": "valkey-numericals-test",
+  "summary": {
+    "total": 0,
+    "passed": 0,
+    "failed": 0,
+    "byCategory": {}
+  },
+  "results": []
+}

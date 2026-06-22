@@ -1,0 +1,560 @@
+{
+  "timestamp": "2026-01-29T09:24:29.119Z",
+  "host": "master.valkey-poc-non-prod.pcfhkv.euc1.cache.amazonaws.com",
+  "port": "6379",
+  "environment": "valkey-test",
+  "summary": {
+    "total": 32,
+    "passed": 26,
+    "failed": 6,
+    "byCategory": {
+      "Basic Cache Operations": {
+        "passed": 5,
+        "failed": 0
+      },
+      "Multi-Value Operations": {
+        "passed": 3,
+        "failed": 0
+      },
+      "TTL Operations": {
+        "passed": 2,
+        "failed": 0
+      },
+      "Key Pattern Operations": {
+        "passed": 1,
+        "failed": 0
+      },
+      "Atomic Operations": {
+        "passed": 1,
+        "failed": 0
+      },
+      "Distributed Locks": {
+        "passed": 5,
+        "failed": 0
+      },
+      "Rate Limiting": {
+        "passed": 3,
+        "failed": 0
+      },
+      "Lua Script Execution": {
+        "passed": 3,
+        "failed": 0
+      },
+      "Pipeline Operations": {
+        "passed": 1,
+        "failed": 0
+      },
+      "Reference Generator": {
+        "passed": 2,
+        "failed": 0
+      },
+      "Distributed Numericals": {
+        "passed": 0,
+        "failed": 6
+      }
+    }
+  },
+  "results": [
+    {
+      "testName": "setValue() and getValue()",
+      "category": "Basic Cache Operations",
+      "passed": true,
+      "duration": 979,
+      "details": {
+        "key": "valkey-migration-1769678652165:basic:1",
+        "value": "test-value-123",
+        "retrieved": "test-value-123"
+      }
+    },
+    {
+      "testName": "setValue() with expiration",
+      "category": "Basic Cache Operations",
+      "passed": true,
+      "duration": 307,
+      "details": {
+        "key": "valkey-migration-1769678652165:basic:2",
+        "value": "expiring-value",
+        "ttl": 60
+      }
+    },
+    {
+      "testName": "setValue() with KEEPTTL",
+      "category": "Basic Cache Operations",
+      "passed": true,
+      "duration": 780,
+      "details": {
+        "key": "valkey-migration-1769678652165:basic:3",
+        "ttl1": 120,
+        "ttl2": 120,
+        "value": "updated"
+      }
+    },
+    {
+      "testName": "removeKey() operation",
+      "category": "Basic Cache Operations",
+      "passed": true,
+      "duration": 621,
+      "details": {
+        "key": "valkey-migration-1769678652165:basic:4",
+        "deleted": true
+      }
+    },
+    {
+      "testName": "removeKeys() bulk delete",
+      "category": "Basic Cache Operations",
+      "passed": true,
+      "duration": 1130,
+      "details": {
+        "keys": [
+          "valkey-migration-1769678652165:basic:5a",
+          "valkey-migration-1769678652165:basic:5b",
+          "valkey-migration-1769678652165:basic:5c"
+        ],
+        "deletedCount": 3
+      }
+    },
+    {
+      "testName": "mSetValues() without expiration",
+      "category": "Multi-Value Operations",
+      "passed": true,
+      "duration": 145,
+      "details": {
+        "cacheData": [
+          {
+            "key": "valkey-migration-1769678652165:multi:1",
+            "value": "value1"
+          },
+          {
+            "key": "valkey-migration-1769678652165:multi:2",
+            "value": "value2"
+          },
+          {
+            "key": "valkey-migration-1769678652165:multi:3",
+            "value": "value3"
+          }
+        ],
+        "result": {
+          "status": "success",
+          "items": [
+            {
+              "key": "valkey-migration-1769678652165:multi:1",
+              "value": "value1"
+            },
+            {
+              "key": "valkey-migration-1769678652165:multi:2",
+              "value": "value2"
+            },
+            {
+              "key": "valkey-migration-1769678652165:multi:3",
+              "value": "value3"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "testName": "mGetValues() operation",
+      "category": "Multi-Value Operations",
+      "passed": true,
+      "duration": 181,
+      "details": {
+        "keys": [
+          "valkey-migration-1769678652165:multi:1",
+          "valkey-migration-1769678652165:multi:2",
+          "valkey-migration-1769678652165:multi:3"
+        ],
+        "values": [
+          "value1",
+          "value2",
+          "value3"
+        ]
+      }
+    },
+    {
+      "testName": "mSetValues() with expiration",
+      "category": "Multi-Value Operations",
+      "passed": true,
+      "duration": 728,
+      "details": {
+        "cacheData": [
+          {
+            "key": "valkey-migration-1769678652165:multi:exp:1",
+            "value": "exp1",
+            "expireInSeconds": 60
+          },
+          {
+            "key": "valkey-migration-1769678652165:multi:exp:2",
+            "value": "exp2",
+            "expireInSeconds": 120
+          },
+          {
+            "key": "valkey-migration-1769678652165:multi:exp:3",
+            "value": "exp3"
+          }
+        ],
+        "ttls": [
+          60,
+          120,
+          -1
+        ]
+      }
+    },
+    {
+      "testName": "getTtl() for key with TTL",
+      "category": "TTL Operations",
+      "passed": true,
+      "duration": 305,
+      "details": {
+        "key": "valkey-migration-1769678652165:ttl:1",
+        "expectedTTL": 300,
+        "actualTTL": 300
+      }
+    },
+    {
+      "testName": "getTtl() for non-expiring key",
+      "category": "TTL Operations",
+      "passed": true,
+      "duration": 334,
+      "details": {
+        "key": "valkey-migration-1769678652165:ttl:2",
+        "ttl": -1
+      }
+    },
+    {
+      "testName": "getKeys() with pattern",
+      "category": "Key Pattern Operations",
+      "passed": true,
+      "duration": 746,
+      "details": {
+        "pattern": "valkey-migration-1769678652165:pattern:test:*",
+        "foundCount": 3
+      }
+    },
+    {
+      "testName": "setGetValue() atomic operation",
+      "category": "Atomic Operations",
+      "passed": true,
+      "duration": 486,
+      "details": {
+        "key": "valkey-migration-1769678652165:atomic:1",
+        "oldValue": "initial-value",
+        "newValue": "new-value"
+      }
+    },
+    {
+      "testName": "Single key lock",
+      "category": "Distributed Locks",
+      "passed": true,
+      "duration": 323,
+      "details": {
+        "key": "valkey-migration-1769678652165:lock:single",
+        "lockTime": 5000,
+        "expirationTime": 1769678663897,
+        "delta": 4786
+      }
+    },
+    {
+      "testName": "Multiple key lock",
+      "category": "Distributed Locks",
+      "passed": true,
+      "duration": 296,
+      "details": {
+        "keys": [
+          "valkey-migration-1769678652165:lock:multi:1",
+          "valkey-migration-1769678652165:lock:multi:2",
+          "valkey-migration-1769678652165:lock:multi:3"
+        ],
+        "lockTime": 5000
+      }
+    },
+    {
+      "testName": "Lock extension",
+      "category": "Distributed Locks",
+      "passed": true,
+      "duration": 2569,
+      "details": {
+        "key": "valkey-migration-1769678652165:lock:extend",
+        "delta1": 2822,
+        "delta2": 4731,
+        "expiration1": 1769678662537,
+        "expiration2": 1769678666665,
+        "timeDiff": 4128
+      }
+    },
+    {
+      "testName": "Lock conflict",
+      "category": "Distributed Locks",
+      "passed": true,
+      "duration": 941,
+      "details": {
+        "key": "valkey-migration-1769678652165:lock:conflict",
+        "lockTime": 5000,
+        "conflictDetected": true
+      }
+    },
+    {
+      "testName": "Lock with custom settings",
+      "category": "Distributed Locks",
+      "passed": true,
+      "duration": 327,
+      "details": {
+        "key": "valkey-migration-1769678652165:lock:settings",
+        "lockSettings": {
+          "retryCount": 5,
+          "retryDelay": 100,
+          "retryJitter": 50
+        }
+      }
+    },
+    {
+      "testName": "Basic rate limiting",
+      "category": "Rate Limiting",
+      "passed": true,
+      "duration": 816,
+      "details": {
+        "namespace": "valkey-migration-1769678652165:ratelimit",
+        "userId": "user-123",
+        "maxRequests": 3,
+        "results": [
+          false,
+          false,
+          false
+        ],
+        "finalBlocked": true
+      }
+    },
+    {
+      "testName": "Rate limiter with info",
+      "category": "Rate Limiting",
+      "passed": true,
+      "duration": 759,
+      "details": {
+        "namespace": "valkey-migration-1769678652165:ratelimit:info",
+        "userId": "user-456",
+        "info": {
+          "blocked": false,
+          "blockedDueToCount": false,
+          "blockedDueToMinDifference": false,
+          "millisecondsUntilAllowed": 0,
+          "actionsRemaining": 1
+        }
+      }
+    },
+    {
+      "testName": "Rate limiter with minDifference",
+      "category": "Rate Limiting",
+      "passed": true,
+      "duration": 853,
+      "details": {
+        "namespace": "valkey-migration-1769678652165:ratelimit:mindiff",
+        "userId": "user-789",
+        "minDifference": 200,
+        "minDiffEnforced": true,
+        "results": [
+          false,
+          true,
+          false
+        ]
+      }
+    },
+    {
+      "testName": "Simple Lua script",
+      "category": "Lua Script Execution",
+      "passed": true,
+      "duration": 467,
+      "details": {
+        "keys": [
+          "valkey-migration-1769678652165:lua:key1",
+          "valkey-migration-1769678652165:lua:key2"
+        ],
+        "result": [
+          "10",
+          "20"
+        ]
+      }
+    },
+    {
+      "testName": "Lua script with INCR",
+      "category": "Lua Script Execution",
+      "passed": true,
+      "duration": 304,
+      "details": {
+        "key": "valkey-migration-1769678652165:lua:counter",
+        "result": [
+          "100",
+          101
+        ]
+      }
+    },
+    {
+      "testName": "Complex Lua (ReferenceGenerator pattern)",
+      "category": "Lua Script Execution",
+      "passed": true,
+      "duration": 467,
+      "details": {
+        "alphabetKey": "valkey-migration-1769678652165:lua:alphabet",
+        "numberKey": "valkey-migration-1769678652165:lua:number",
+        "result": [
+          "A",
+          101
+        ]
+      }
+    },
+    {
+      "testName": "Bulk pipeline",
+      "category": "Pipeline Operations",
+      "passed": true,
+      "duration": 156,
+      "details": {
+        "keyCount": 20,
+        "result": {
+          "status": "success",
+          "items": [
+            {
+              "key": "valkey-migration-1769678652165:pipeline:0",
+              "value": "pipeline-value-0"
+            },
+            {
+              "key": "valkey-migration-1769678652165:pipeline:1",
+              "value": "pipeline-value-1"
+            },
+            {
+              "key": "valkey-migration-1769678652165:pipeline:2",
+              "value": "pipeline-value-2"
+            },
+            {
+              "key": "valkey-migration-1769678652165:pipeline:3",
+              "value": "pipeline-value-3"
+            },
+            {
+              "key": "valkey-migration-1769678652165:pipeline:4",
+              "value": "pipeline-value-4"
+            },
+            {
+              "key": "valkey-migration-1769678652165:pipeline:5",
+              "value": "pipeline-value-5"
+            },
+            {
+              "key": "valkey-migration-1769678652165:pipeline:6",
+              "value": "pipeline-value-6"
+            },
+            {
+              "key": "valkey-migration-1769678652165:pipeline:7",
+              "value": "pipeline-value-7"
+            },
+            {
+              "key": "valkey-migration-1769678652165:pipeline:8",
+              "value": "pipeline-value-8"
+            },
+            {
+              "key": "valkey-migration-1769678652165:pipeline:9",
+              "value": "pipeline-value-9"
+            },
+            {
+              "key": "valkey-migration-1769678652165:pipeline:10",
+              "value": "pipeline-value-10"
+            },
+            {
+              "key": "valkey-migration-1769678652165:pipeline:11",
+              "value": "pipeline-value-11"
+            },
+            {
+              "key": "valkey-migration-1769678652165:pipeline:12",
+              "value": "pipeline-value-12"
+            },
+            {
+              "key": "valkey-migration-1769678652165:pipeline:13",
+              "value": "pipeline-value-13"
+            },
+            {
+              "key": "valkey-migration-1769678652165:pipeline:14",
+              "value": "pipeline-value-14"
+            },
+            {
+              "key": "valkey-migration-1769678652165:pipeline:15",
+              "value": "pipeline-value-15"
+            },
+            {
+              "key": "valkey-migration-1769678652165:pipeline:16",
+              "value": "pipeline-value-16"
+            },
+            {
+              "key": "valkey-migration-1769678652165:pipeline:17",
+              "value": "pipeline-value-17"
+            },
+            {
+              "key": "valkey-migration-1769678652165:pipeline:18",
+              "value": "pipeline-value-18"
+            },
+            {
+              "key": "valkey-migration-1769678652165:pipeline:19",
+              "value": "pipeline-value-19"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "testName": "Generate reference - fresh start",
+      "category": "Reference Generator",
+      "passed": true,
+      "duration": 951,
+      "details": {
+        "refKey": "valkey-migration-1769678652165-ref-1",
+        "reference": "valkey-migration-1769678652165-ref-1-29012026-A301"
+      }
+    },
+    {
+      "testName": "Generate reference - with Redis state",
+      "category": "Reference Generator",
+      "passed": true,
+      "duration": 622,
+      "details": {
+        "refKey": "valkey-migration-1769678652165-ref-2",
+        "reference": "valkey-migration-1769678652165-ref-2-29012026-B101"
+      }
+    },
+    {
+      "testName": "Mongo: Basic sequence generation",
+      "category": "Distributed Numericals",
+      "passed": false,
+      "duration": 0,
+      "error": "MongoNumericals.getNextNumber is not a function"
+    },
+    {
+      "testName": "Mongo: Concurrent generation (10 parallel)",
+      "category": "Distributed Numericals",
+      "passed": false,
+      "duration": 0,
+      "error": "MongoNumericals.getNextNumber is not a function"
+    },
+    {
+      "testName": "MySQL: Basic sequence generation",
+      "category": "Distributed Numericals",
+      "passed": false,
+      "duration": 0,
+      "error": "MySQLNumericals.getNextNumber is not a function"
+    },
+    {
+      "testName": "MySQL: Sequence reset",
+      "category": "Distributed Numericals",
+      "passed": false,
+      "duration": 0,
+      "error": "MySQLNumericals.getNextNumber is not a function"
+    },
+    {
+      "testName": "Verto: Basic sequence generation",
+      "category": "Distributed Numericals",
+      "passed": false,
+      "duration": 0,
+      "error": "VertoNumericals.getNextNumber is not a function"
+    },
+    {
+      "testName": "Verto: Custom start value",
+      "category": "Distributed Numericals",
+      "passed": false,
+      "duration": 0,
+      "error": "VertoNumericals.getNextNumber is not a function"
+    }
+  ]
+}

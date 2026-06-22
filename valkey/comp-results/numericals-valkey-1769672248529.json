@@ -1,0 +1,196 @@
+{
+  "timestamp": "2026-01-29T07:37:28.530Z",
+  "packageVersions": {
+    "vertoRedis": "^5.0.0",
+    "mongoNumericals": "^4.0.1",
+    "mysqlNumericals": "^8.0.1",
+    "vertoNumericals": "^8.0.1"
+  },
+  "host": "master.valkey-poc-non-prod.pcfhkv.euc1.cache.amazonaws.com",
+  "port": "6379",
+  "environment": "valkey-numericals-test",
+  "summary": {
+    "total": 14,
+    "passed": 7,
+    "failed": 7,
+    "byCategory": {
+      "Mongo Distributed Numericals": {
+        "passed": 2,
+        "failed": 2
+      },
+      "Verto Distributed Numericals": {
+        "passed": 1,
+        "failed": 3
+      },
+      "Concurrent Number Generation": {
+        "passed": 1,
+        "failed": 2
+      },
+      "Sequence Reset & Management": {
+        "passed": 3,
+        "failed": 0
+      }
+    }
+  },
+  "results": [
+    {
+      "testName": "Basic number generation",
+      "category": "Mongo Distributed Numericals",
+      "passed": true,
+      "duration": 1449,
+      "details": {
+        "num1": 29,
+        "num2": 30,
+        "num3": 31,
+        "sequential": true
+      }
+    },
+    {
+      "testName": "Multiple sequences independence",
+      "category": "Mongo Distributed Numericals",
+      "passed": true,
+      "duration": 749,
+      "details": {
+        "sequence1": [
+          null,
+          null
+        ],
+        "sequence2": [
+          null,
+          null
+        ],
+        "independent": true
+      }
+    },
+    {
+      "testName": "Reference format validation",
+      "category": "Mongo Distributed Numericals",
+      "passed": false,
+      "duration": 381,
+      "error": "References not sequential: NaN, NaN"
+    },
+    {
+      "testName": "Sequential increment validation",
+      "category": "Mongo Distributed Numericals",
+      "passed": false,
+      "duration": 560,
+      "error": "Numbers not sequential: NaN, NaN, NaN"
+    },
+    {
+      "testName": "Basic number generation",
+      "category": "Verto Distributed Numericals",
+      "passed": false,
+      "duration": 1138,
+      "error": "Numbers not sequential: NaN, NaN, NaN"
+    },
+    {
+      "testName": "Multiple sequences independence",
+      "category": "Verto Distributed Numericals",
+      "passed": true,
+      "duration": 713,
+      "details": {
+        "sequence1": [
+          null,
+          null
+        ],
+        "sequence2": [
+          null,
+          null
+        ],
+        "independent": false
+      }
+    },
+    {
+      "testName": "Reference format validation",
+      "category": "Verto Distributed Numericals",
+      "passed": false,
+      "duration": 382,
+      "error": "References not sequential: NaN, NaN"
+    },
+    {
+      "testName": "Sequential increment validation",
+      "category": "Verto Distributed Numericals",
+      "passed": false,
+      "duration": 593,
+      "error": "Numbers not sequential: NaN, NaN, NaN"
+    },
+    {
+      "testName": "Parallel requests (10 concurrent)",
+      "category": "Concurrent Number Generation",
+      "passed": false,
+      "duration": 210,
+      "error": "Expected 10 unique numbers, got 1. Collision detected!"
+    },
+    {
+      "testName": "High concurrency (50 parallel)",
+      "category": "Concurrent Number Generation",
+      "passed": false,
+      "duration": 496,
+      "error": "Collision detected! Expected 50 unique, got 1"
+    },
+    {
+      "testName": "Mixed sequences concurrent",
+      "category": "Concurrent Number Generation",
+      "passed": true,
+      "duration": 246,
+      "details": {
+        "sequences": 3,
+        "requestsPerSequence": 5,
+        "totalRequests": 15
+      }
+    },
+    {
+      "testName": "Multiple sequence independence",
+      "category": "Sequence Reset & Management",
+      "passed": true,
+      "duration": 1436,
+      "details": {
+        "sequenceCount": 3,
+        "sequence1": [
+          47,
+          48
+        ],
+        "sequence2": [
+          125,
+          126
+        ],
+        "sequence3": [
+          34,
+          35
+        ],
+        "allSequential": true
+      }
+    },
+    {
+      "testName": "Sequential generation across types",
+      "category": "Sequence Reset & Management",
+      "passed": true,
+      "duration": 879,
+      "details": {
+        "count": 5,
+        "numbers": [
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "sequential": true
+      }
+    },
+    {
+      "testName": "Reference format consistency",
+      "category": "Sequence Reset & Management",
+      "passed": true,
+      "duration": 535,
+      "details": {
+        "references": [
+          "FEE-29012026-E36",
+          "FEE-29012026-E37",
+          "FEE-29012026-E38"
+        ],
+        "formatValid": true
+      }
+    }
+  ]
+}

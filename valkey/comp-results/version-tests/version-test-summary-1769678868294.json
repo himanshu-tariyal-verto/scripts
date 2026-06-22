@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-01-29T09:27:48.294Z",
+  "host": "master.valkey-poc-non-prod.pcfhkv.euc1.cache.amazonaws.com",
+  "port": "6379",
+  "environment": "valkey-version-test",
+  "totalVersions": 2,
+  "completedTests": 2,
+  "failedTests": 0,
+  "results": [
+    {
+      "version": "5.0.0",
+      "description": "Current stable version",
+      "status": "completed",
+      "duration": 32150,
+      "timestamp": "2026-01-29T09:27:17.595Z"
+    },
+    {
+      "version": "8.0.1",
+      "description": "Latest stable version",
+      "status": "completed",
+      "duration": 26671,
+      "timestamp": "2026-01-29T09:27:46.278Z"
+    }
+  ]
+}
